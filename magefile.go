@@ -75,7 +75,7 @@ func CopyApp() error {
 	if err := mageutil.CopyRecursively(destDir, srcDir); err != nil {
 		return fmt.Errorf("copying %s -> %s: %w", srcDir, destDir, err)
 	}
-	if err := mageutil.CopyInDir(destDir, baseDir, "go.mod", "go.sum"); err != nil {
+	if err := mageutil.CopyInDir(destDir, baseDir, "go.mod", "go.sum", "VERSION", "version.go"); err != nil {
 		return fmt.Errorf("copying mod files: %w", err)
 	}
 	return nil
