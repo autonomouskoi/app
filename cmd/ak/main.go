@@ -5,6 +5,7 @@ import (
 	_ "github.com/autonomouskoi/app"
 	_ "github.com/autonomouskoi/banter"
 	_ "github.com/autonomouskoi/trackstar"
+	_ "github.com/autonomouskoi/trackstar/mixxx"
 	_ "github.com/autonomouskoi/trackstar/overlay"
 	_ "github.com/autonomouskoi/trackstar/stagelinq"
 	_ "github.com/autonomouskoi/trackstar/twitchchat"

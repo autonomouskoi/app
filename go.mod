@@ -5,7 +5,7 @@ go 1.23.4
 require (
 	github.com/autonomouskoi/akcore v0.0.13
 	github.com/autonomouskoi/banter v0.0.13
-	github.com/autonomouskoi/mageutil v0.0.14
+	github.com/autonomouskoi/mageutil v0.0.15
 	github.com/autonomouskoi/trackstar v0.0.14
 	github.com/autonomouskoi/twitch v0.0.13
 	github.com/magefile/mage v1.15.0
@@ -13,7 +13,7 @@ require (
 
 require (
 	fyne.io/systray v1.11.0 // indirect
-	github.com/autonomouskoi/datastruct v0.0.0-20241128030344-91fb33460053 // indirect
+	github.com/autonomouskoi/datastruct v0.0.13 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/dgraph-io/badger/v4 v4.2.0 // indirect
 	github.com/dgraph-io/ristretto v0.1.1 // indirect
