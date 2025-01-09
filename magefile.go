@@ -75,7 +75,7 @@ func CopyApp() error {
 	if err := mageutil.CopyRecursively(destDir, srcDir); err != nil {
 		return fmt.Errorf("copying %s -> %s: %w", srcDir, destDir, err)
 	}
-	if err := mageutil.CopyInDir(destDir, baseDir, "go.mod", "go.sum", "VERSION", "version.go"); err != nil {
+	if err := mageutil.CopyInDir(destDir, baseDir, "go.mod", "go.sum"); err != nil {
 		return fmt.Errorf("copying mod files: %w", err)
 	}
 	return nil
@@ -289,16 +289,26 @@ func ReleaseLinux() error {
 
 func ReleaseWin() error {
 	mg.Deps(ReleaseDeps)
+
+	thisPath, err := os.Getwd()
+	if err != nil {
+		return fmt.Errorf("getting working directory: %w", err)
+	}
+	defer os.Chdir(thisPath)
+	if err := os.Chdir(mainPath); err != nil {
+		return fmt.Errorf("switching to main source dir: %w", err)
+	}
+
 	exeName := "ak.exe"
 	outPath := filepath.Join(distDir, exeName)
-	err := sh.RunWith(map[string]string{
+	err = sh.RunWith(map[string]string{
 		"CGO_ENABLED": "1",
 		"CGO_CFLAGS":  "-I/mingw64/include",
 		"MSYSTEM":     "MINGW64",
 	},
 		"go", "build",
 		"-o", outPath,
-		"-ldflags", "-H=windowsgui",
+		"-ldflags", "-H=windowsgui -X github.com/autonomouskoi/akcore.Version="+releaseVersion[1:],
 		mainPath,
 	)
 	if err != nil {
