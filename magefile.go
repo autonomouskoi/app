@@ -268,9 +268,19 @@ func ReleaseMac() error {
 
 func ReleaseLinux() error {
 	mg.Deps(ReleaseDeps)
+
+	thisPath, err := os.Getwd()
+	if err != nil {
+		return fmt.Errorf("getting working directory: %w", err)
+	}
+	defer os.Chdir(thisPath)
+	if err := os.Chdir(mainPath); err != nil {
+		return fmt.Errorf("switching to main source dir: %w", err)
+	}
+
 	exeName := "autonomouskoi"
 	outPath := filepath.Join(distDir, exeName)
-	err := sh.RunWith(map[string]string{},
+	err = sh.RunWith(map[string]string{},
 		"go", "build",
 		"-o", outPath,
 		"-ldflags", "-s -w -X github.com/autonomouskoi/akcore.Version="+releaseVersion[1:],
