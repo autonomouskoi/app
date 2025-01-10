@@ -179,7 +179,7 @@ func ReleaseMac() error {
 	err := sh.RunWith(map[string]string{},
 		"go", "build",
 		"-o", outPath,
-		"-ldflags", "-s -w",
+		"-ldflags", "-s -w -X github.com/autonomouskoi/akcore.Version="+releaseVersion[1:],
 		mainPath,
 	)
 	if err != nil {
@@ -273,7 +273,7 @@ func ReleaseLinux() error {
 	err := sh.RunWith(map[string]string{},
 		"go", "build",
 		"-o", outPath,
-		"-ldflags", "-s -w",
+		"-ldflags", "-s -w -X github.com/autonomouskoi/akcore.Version="+releaseVersion[1:],
 		mainPath,
 	)
 	if err != nil {
