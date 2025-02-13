@@ -270,12 +270,12 @@ var goarch string
 
 func ReleaseLinuxAMD64() {
 	goarch = "amd64"
-	mg.Deps(releaseLinux())
+	mg.Deps(releaseLinux)
 }
 
 func ReleaseLinuxARM64() {
 	goarch = "arm64"
-	mg.Deps(releaseLinux())
+	mg.Deps(releaseLinux)
 }
 
 func releaseLinux() error {
