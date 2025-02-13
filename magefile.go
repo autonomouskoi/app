@@ -266,8 +266,20 @@ func ReleaseMac() error {
 	return nil
 }
 
-func ReleaseLinux() error {
-	mg.Deps(ReleaseDeps)
+var goarch string
+
+func ReleaseLinuxAMD64() {
+	goarch = "amd64"
+	mg.Deps(releaseLinux())
+}
+
+func ReleaseLinuxARM64() {
+	goarch = "arm64"
+	mg.Deps(releaseLinux())
+}
+
+func releaseLinux() error {
+	mg.Deps(ReleaseDeps, Build)
 
 	thisPath, err := os.Getwd()
 	if err != nil {
@@ -280,7 +292,9 @@ func ReleaseLinux() error {
 
 	exeName := "autonomouskoi"
 	outPath := filepath.Join(distDir, exeName)
-	err = sh.RunWith(map[string]string{},
+	err = sh.RunWith(map[string]string{
+		"GOARCH": goarch,
+	},
 		"go", "build",
 		"-o", outPath,
 		"-ldflags", "-s -w -X github.com/autonomouskoi/akcore.Version="+releaseVersion[1:],
@@ -289,7 +303,7 @@ func ReleaseLinux() error {
 	if err != nil {
 		return fmt.Errorf("building %s: %w", outPath, err)
 	}
-	zipPath := filepath.Join(distDir, "AutonomousKoi-linux-"+releaseVersion+".zip")
+	zipPath := filepath.Join(distDir, "AutonomousKoi-linux-"+goarch+"-"+releaseVersion+".zip")
 	err = mageutil.ZipFiles(zipPath, map[string]string{
 		filepath.Join(baseDir, "LICENSE"): "LICENSE",
 		outPath:                           exeName,
@@ -298,7 +312,7 @@ func ReleaseLinux() error {
 }
 
 func ReleaseWin() error {
-	mg.Deps(ReleaseDeps)
+	mg.Deps(ReleaseDeps, Build)
 
 	thisPath, err := os.Getwd()
 	if err != nil {
