@@ -3,11 +3,11 @@ module github.com/autonomouskoi/app
 go 1.23.4
 
 require (
-	github.com/autonomouskoi/akcore v0.0.16
-	github.com/autonomouskoi/banter v0.0.15
+	github.com/autonomouskoi/akcore v0.0.17
+	github.com/autonomouskoi/banter v0.0.16
 	github.com/autonomouskoi/mageutil v0.0.15
-	github.com/autonomouskoi/trackstar v0.0.17
-	github.com/autonomouskoi/twitch v0.0.16
+	github.com/autonomouskoi/trackstar v0.0.18
+	github.com/autonomouskoi/twitch v0.0.17
 	github.com/magefile/mage v1.15.0
 )
 
