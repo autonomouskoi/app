@@ -142,7 +142,7 @@ func CoreDeps() error {
 
 func Build() error {
 	mg.Deps(CoreDeps)
-	for _, mod := range []string{"banter", "twitch", "trackstar"} {
+	for _, mod := range []string{"twitch", "trackstar", "banter"} {
 		buildPath := filepath.Join(mod, "build")
 		if err := mageBuild("all", buildPath); err != nil {
 			return fmt.Errorf("building %s: %w", mod, err)
