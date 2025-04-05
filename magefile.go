@@ -214,7 +214,7 @@ func ReleaseMac() error {
 	if err != nil {
 		return fmt.Errorf("statting executable: %w", err)
 	}
-	err = sh.Run("hdiutil", "resize", "-size", strconv.Itoa(int(stat.Size())+(1024*1024)), dmgFilePath)
+	err = sh.Run("hdiutil", "resize", "-size", strconv.Itoa(int(stat.Size())+(64*1024*1024)), dmgFilePath)
 	if err != nil {
 		return fmt.Errorf("resizing DMG file: %w", err)
 	}
@@ -247,6 +247,33 @@ func ReleaseMac() error {
 	licSrcPath := filepath.Join(baseDir, "LICENSE")
 	if err := sh.Copy(licDestPath, licSrcPath); err != nil {
 		return fmt.Errorf("copying LICENSE: %w", err)
+	}
+	err = sh.Run("/bin/sh",
+		filepath.Join(baseDir, "third_party_libs_tool"),
+		filepath.Join(appDir, "AutonomousKoi.app"),
+	)
+	if err != nil {
+		return fmt.Errorf("linking libs: %w", err)
+	}
+	// signing
+	err = sh.Run("codesign",
+		"-s", "D00E79F3D70A4981BC28490E48E91E7430B4A245",
+		"--timestamp",
+		"-o", "runtime",
+		filepath.Join(appDir, "AutonomousKoi.app", "Contents", "Frameworks", "libcrypto.3.dylib"),
+	)
+	if err != nil {
+		return fmt.Errorf("signing libcrypto: %w", err)
+	}
+	err = sh.Run("codesign",
+		"-s", "D00E79F3D70A4981BC28490E48E91E7430B4A245",
+		"--entitlements", filepath.Join(baseDir, "ak.entitlements"),
+		"--timestamp",
+		"-o", "runtime",
+		appExecPath,
+	)
+	if err != nil {
+		return fmt.Errorf("signing ak: %w", err)
 	}
 
 	// detach, compress
