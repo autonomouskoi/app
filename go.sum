@@ -26,6 +26,7 @@ github.com/autonomouskoi/datastruct v0.0.13 h1:EuEbJLhBPSOgUNegRQKZ370TRtifVcXYi
 github.com/autonomouskoi/datastruct v0.0.13/go.mod h1:vavjFRRPddUMUKJW2n71OFfKCMqriBQZYaScP7ZZz48=
 github.com/autonomouskoi/mageutil v0.0.15 h1:YvjT7vsUicczhKooNJi+s0C5xPTm3/ZStd/DC82GEGY=
 github.com/autonomouskoi/mageutil v0.0.15/go.mod h1:t46xOJ4x+k3aOxV4T2uAaPv9yNNUxSs+H8yWd+A/svI=
+github.com/autonomouskoi/mageutil v0.0.16 h1:aHjdBOlnSm9/LhBOkAYpxes1jZH+B5lFA+5jyNkUxSQ=
 github.com/autonomouskoi/mageutil v0.0.16/go.mod h1:t46xOJ4x+k3aOxV4T2uAaPv9yNNUxSs+H8yWd+A/svI=
 github.com/autonomouskoi/trackstar v0.0.16 h1:v93DIcbA1zn5SJh/m+/KZkrlytss1IxJW3DqeI7wNv4=
 github.com/autonomouskoi/trackstar v0.0.16/go.mod h1:QM2EcBmYzRzfNJ2Pe5t930yokyLU9rg3aHO3hZG2nVM=
