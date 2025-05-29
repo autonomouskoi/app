@@ -6,7 +6,7 @@ require (
 	github.com/autonomouskoi/akcore v0.1.2
 	github.com/autonomouskoi/banter v0.0.19
 	github.com/autonomouskoi/mageutil v0.0.18
-	github.com/autonomouskoi/trackstar v0.0.23
+	github.com/autonomouskoi/trackstar v0.0.24
 	github.com/autonomouskoi/twitch v0.0.21
 	github.com/magefile/mage v1.15.0
 )
