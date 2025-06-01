@@ -3,7 +3,7 @@ module github.com/autonomouskoi/app
 go 1.23.4
 
 require (
-	github.com/autonomouskoi/akcore v0.1.2
+	github.com/autonomouskoi/akcore v0.1.4
 	github.com/autonomouskoi/banter v0.0.19
 	github.com/autonomouskoi/mageutil v0.0.18
 	github.com/autonomouskoi/trackstar v0.0.24
@@ -39,8 +39,8 @@ require (
 	go.opentelemetry.io/otel v1.36.0 // indirect
 	go.opentelemetry.io/otel/metric v1.36.0 // indirect
 	go.opentelemetry.io/otel/trace v1.36.0 // indirect
-	go.opentelemetry.io/proto/otlp v1.6.0 // indirect
-	golang.org/x/exp v0.0.0-20250506013437-ce4c2cf36ca6 // indirect
+	go.opentelemetry.io/proto/otlp v1.7.0 // indirect
+	golang.org/x/exp v0.0.0-20250531010427-b6e5de432a8b // indirect
 	golang.org/x/net v0.40.0 // indirect
 	golang.org/x/sync v0.14.0 // indirect
 	golang.org/x/sys v0.33.0 // indirect
