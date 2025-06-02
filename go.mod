@@ -3,7 +3,7 @@ module github.com/autonomouskoi/app
 go 1.23.4
 
 require (
-	github.com/autonomouskoi/akcore v0.1.4
+	github.com/autonomouskoi/akcore v0.1.5
 	github.com/autonomouskoi/banter v0.0.19
 	github.com/autonomouskoi/mageutil v0.0.18
 	github.com/autonomouskoi/trackstar v0.0.24

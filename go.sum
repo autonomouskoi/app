@@ -12,6 +12,8 @@ github.com/autonomouskoi/akcore v0.1.3 h1:L6TWIcwnUAFQPfAVu2iNNTNM5awY5Ug/yc+5Qo
 github.com/autonomouskoi/akcore v0.1.3/go.mod h1:xCbGByqgZvpN68nvbfKFn0C3oWKZ8C0VvHwcLlNYI1Q=
 github.com/autonomouskoi/akcore v0.1.4 h1:CyNzm7h23fUeC81R2wCkPzgcGHyewDbIQD0cD3tdc44=
 github.com/autonomouskoi/akcore v0.1.4/go.mod h1:xCbGByqgZvpN68nvbfKFn0C3oWKZ8C0VvHwcLlNYI1Q=
+github.com/autonomouskoi/akcore v0.1.5 h1:O49Al6iKH/yD1pQB0Y6U+sFnJbCYbCac1e/mS7hA1NQ=
+github.com/autonomouskoi/akcore v0.1.5/go.mod h1:xCbGByqgZvpN68nvbfKFn0C3oWKZ8C0VvHwcLlNYI1Q=
 github.com/autonomouskoi/banter v0.0.18 h1:tXc3Ygoi/V5cQsbTxfvDq3WaX6+iBJbLF6O2QxO5oUQ=
 github.com/autonomouskoi/banter v0.0.18/go.mod h1:kjDMglAkpSMJEBmQQgOrqWCYma7exSyFCBJ8xNIzdrs=
 github.com/autonomouskoi/banter v0.0.19 h1:od3IZpTavHcVQzJDUIfQndmMcp/JwgJCdGYaZZHRIj8=
