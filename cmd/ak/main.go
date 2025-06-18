@@ -6,7 +6,6 @@ import (
 	_ "github.com/autonomouskoi/trackstar"
 	_ "github.com/autonomouskoi/trackstar/mixxx"
 	_ "github.com/autonomouskoi/trackstar/stagelinq"
-	_ "github.com/autonomouskoi/trackstar/twitchchat"
 	_ "github.com/autonomouskoi/twitch"
 )
 

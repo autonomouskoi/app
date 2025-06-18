@@ -3,10 +3,10 @@ module github.com/autonomouskoi/app
 go 1.23.4
 
 require (
-	github.com/autonomouskoi/akcore v0.1.5
+	github.com/autonomouskoi/akcore v0.1.6
 	github.com/autonomouskoi/banter v0.0.19
-	github.com/autonomouskoi/mageutil v0.0.18
-	github.com/autonomouskoi/trackstar v0.0.24
+	github.com/autonomouskoi/mageutil v0.0.19
+	github.com/autonomouskoi/trackstar v0.0.27
 	github.com/autonomouskoi/twitch v0.0.21
 	github.com/magefile/mage v1.15.0
 )
@@ -40,11 +40,11 @@ require (
 	go.opentelemetry.io/otel/metric v1.36.0 // indirect
 	go.opentelemetry.io/otel/trace v1.36.0 // indirect
 	go.opentelemetry.io/proto/otlp v1.7.0 // indirect
-	golang.org/x/exp v0.0.0-20250531010427-b6e5de432a8b // indirect
-	golang.org/x/net v0.40.0 // indirect
-	golang.org/x/sync v0.14.0 // indirect
+	golang.org/x/exp v0.0.0-20250606033433-dcc06ee1d476 // indirect
+	golang.org/x/net v0.41.0 // indirect
+	golang.org/x/sync v0.15.0 // indirect
 	golang.org/x/sys v0.33.0 // indirect
-	golang.org/x/text v0.25.0 // indirect
+	golang.org/x/text v0.26.0 // indirect
 	google.golang.org/protobuf v1.36.6 // indirect
 	nhooyr.io/websocket v1.8.17 // indirect
 )
