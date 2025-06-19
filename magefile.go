@@ -88,7 +88,6 @@ func NPMInstall() error {
 		filepath.Join("akcore", "web", "content"),
 		"trackstar",
 		filepath.Join("trackstar", "stagelinq"),
-		filepath.Join("trackstar", "twitchchat"),
 		"twitch",
 	} {
 		contentPath := filepath.Join(workDir, path)
