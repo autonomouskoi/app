@@ -55,7 +55,7 @@ func CloneRepos() error {
 	if err := os.Chdir(workDir); err != nil {
 		return fmt.Errorf("switching to %s: %w", workDir, err)
 	}
-	for _, repo := range []string{"akcore", "banter", "trackstar", "twitch"} {
+	for _, repo := range []string{"akcore", "trackstar", "twitch"} {
 		outPath := filepath.Join(workDir, repo)
 		if _, err := os.Stat(outPath); err == nil {
 			continue
@@ -84,7 +84,6 @@ func CopyApp() error {
 func NPMInstall() error {
 	mg.Deps(CloneRepos, Prereqs)
 	for _, path := range []string{
-		"banter",
 		filepath.Join("akcore", "web", "content"),
 		"trackstar",
 		filepath.Join("trackstar", "stagelinq"),
@@ -117,7 +116,7 @@ func GoWorkspace() error {
 	if err := sh.Run("go", "work", "init"); err != nil {
 		return fmt.Errorf("initializing Go workspace: %w", err)
 	}
-	err := sh.Run("go", "work", "use", "akcore", "app", "banter", "trackstar", "twitch")
+	err := sh.Run("go", "work", "use", "akcore", "app", "trackstar", "twitch")
 	if err != nil {
 		return fmt.Errorf("configuring Go workspace: %w", err)
 	}
@@ -140,7 +139,7 @@ func CoreDeps() error {
 
 func Build() error {
 	mg.Deps(CoreDeps)
-	for _, mod := range []string{"twitch", "trackstar", "banter"} {
+	for _, mod := range []string{"twitch", "trackstar"} {
 		buildPath := filepath.Join(mod, "build")
 		if err := mageBuild("all", buildPath); err != nil {
 			return fmt.Errorf("building %s: %w", mod, err)
