@@ -176,6 +176,7 @@ func ReleaseMac() error {
 	err := sh.RunWith(map[string]string{},
 		"go", "build",
 		"-o", outPath,
+		"-trimpath",
 		"-ldflags", "-s -w -X github.com/autonomouskoi/akcore.Version="+releaseVersion[1:],
 		mainPath,
 	)
@@ -321,6 +322,7 @@ func releaseLinux() error {
 	},
 		"go", "build",
 		"-o", outPath,
+		"-trimpath",
 		"-ldflags", "-s -w -X github.com/autonomouskoi/akcore.Version="+releaseVersion[1:],
 		mainPath,
 	)
@@ -356,6 +358,7 @@ func ReleaseWin() error {
 	},
 		"go", "build",
 		"-o", outPath,
+		"-trimpath",
 		"-ldflags", "-H=windowsgui -X github.com/autonomouskoi/akcore.Version="+releaseVersion[1:],
 		mainPath,
 	)
