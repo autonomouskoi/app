@@ -32,6 +32,8 @@ github.com/autonomouskoi/twitch v0.0.23 h1:9i/+qqp9Qwf/DlZE8dqqnth/NJVsOt+lj0Jff
 github.com/autonomouskoi/twitch v0.0.23/go.mod h1:KcEy0XPGGmm2Ej4ZqkpWYl0eC+M0kH8nc6IoXoJnvs0=
 github.com/autonomouskoi/twitch v0.0.24 h1:jCwrhCGUCbdECTUWCGhejRr6hCA13iAMqod25x8fuho=
 github.com/autonomouskoi/twitch v0.0.24/go.mod h1:IOh5Ts9+H0A/DFPmf8h2ffcnWBTEH4iuVPF6yID9He8=
+github.com/autonomouskoi/twitch v0.0.25 h1:1cOQRISmXx1Bfpu0wi4N/nee+necEbPrqIfllFwSYDQ=
+github.com/autonomouskoi/twitch v0.0.25/go.mod h1:IOh5Ts9+H0A/DFPmf8h2ffcnWBTEH4iuVPF6yID9He8=
 github.com/cespare/xxhash/v2 v2.3.0 h1:UL815xU9SqsFlibzuggzjXhog7bL6oX9BbNZnL2UFvs=
 github.com/cespare/xxhash/v2 v2.3.0/go.mod h1:VGX0DQ3Q6kWi7AoAeZDth3/j3BFtOZR5XLFGgcrjCOs=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
