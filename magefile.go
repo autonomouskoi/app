@@ -173,7 +173,10 @@ func ReleaseMac() error {
 	mg.Deps(ReleaseDeps, Build)
 	baseName := "ak-mac-" + releaseVersion
 	outPath := filepath.Join(distDir, baseName)
-	err := sh.RunWith(map[string]string{},
+	err := sh.RunWith(map[string]string{
+		"GOOS":   "darwin",
+		"GOARCH": "arm64",
+	},
 		"go", "build",
 		"-o", outPath,
 		"-trimpath",
@@ -318,6 +321,7 @@ func releaseLinux() error {
 	exeName := "autonomouskoi"
 	outPath := filepath.Join(distDir, exeName)
 	err = sh.RunWith(map[string]string{
+		"GOOS":   "linux",
 		"GOARCH": goarch,
 	},
 		"go", "build",
@@ -355,6 +359,8 @@ func ReleaseWin() error {
 		"CGO_ENABLED": "1",
 		"CGO_CFLAGS":  "-I/mingw64/include",
 		"MSYSTEM":     "MINGW64",
+		"GOOS":        "windows",
+		"GOARCH":      "amd64",
 	},
 		"go", "build",
 		"-o", outPath,
