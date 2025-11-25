@@ -28,6 +28,8 @@ github.com/autonomouskoi/trackstar v0.0.28 h1:m6JofG65/tcS7vYbePfR1oAAenpNbC3lSk
 github.com/autonomouskoi/trackstar v0.0.28/go.mod h1:cdwVgv1Rchx4hO6e5pUjXNXm2mwkqNclxQcWZGNJvCc=
 github.com/autonomouskoi/trackstar v0.1.0 h1:3jC2DqJ/dod3Hs92xGxZevG+sLTN6I7+ezeNRGkXsXU=
 github.com/autonomouskoi/trackstar v0.1.0/go.mod h1:I0zEKmlvSpzK6WbaiKkpDGx5u9vybZ93FaxswRojKjQ=
+github.com/autonomouskoi/trackstar v0.1.1 h1:zzy3zIgVX0CB9fiBorx3hYUyPw4TIxb6YcJ1Y8kq8mo=
+github.com/autonomouskoi/trackstar v0.1.1/go.mod h1:I0zEKmlvSpzK6WbaiKkpDGx5u9vybZ93FaxswRojKjQ=
 github.com/autonomouskoi/twitch v0.0.22 h1:fWzdsqfr5Ez5RN6wcrlAHiFa9IRMGdms2Jdxz1FpRFU=
 github.com/autonomouskoi/twitch v0.0.22/go.mod h1:KcEy0XPGGmm2Ej4ZqkpWYl0eC+M0kH8nc6IoXoJnvs0=
 github.com/autonomouskoi/twitch v0.0.23 h1:9i/+qqp9Qwf/DlZE8dqqnth/NJVsOt+lj0JffFdCDZk=
