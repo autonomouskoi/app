@@ -258,6 +258,14 @@ func ReleaseMac() error {
 	}
 	// signing
 	err = sh.Run("codesign",
+		"--remove-signature",
+		filepath.Join(appDir, "AutonomousKoi.app", "Contents", "Frameworks", "libcrypto.3.dylib"),
+	)
+	if err != nil {
+		return fmt.Errorf("removing libcrypto signature: %w", err)
+	}
+	err = sh.Run("codesign",
+		"--remove-signature",
 		"-s", "D00E79F3D70A4981BC28490E48E91E7430B4A245",
 		"--timestamp",
 		"-o", "runtime",
