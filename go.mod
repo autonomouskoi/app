@@ -7,6 +7,7 @@ require (
 	github.com/autonomouskoi/mageutil v0.0.21
 	github.com/autonomouskoi/trackstar v0.1.1
 	github.com/autonomouskoi/twitch v0.0.25
+	github.com/glebarez/go-sqlite v1.22.0
 	github.com/magefile/mage v1.15.0
 )
 
@@ -26,6 +27,7 @@ require (
 	github.com/godbus/dbus/v5 v5.1.0 // indirect
 	github.com/golang-jwt/jwt/v4 v4.5.2 // indirect
 	github.com/google/flatbuffers v25.12.19+incompatible // indirect
+	github.com/google/uuid v1.6.0 // indirect
 	github.com/hypebeast/go-osc v0.0.0-20220308234300-cec5a8a1e5f5 // indirect
 	github.com/ianlancetaylor/demangle v0.0.0-20251118225945-96ee0021ea0f // indirect
 	github.com/icedream/go-stagelinq v1.0.1-0.20250917191334-9c24e7a0b27e // indirect
@@ -36,6 +38,7 @@ require (
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/nicklaw5/helix/v2 v2.31.1 // indirect
 	github.com/pkg/browser v0.0.0-20240102092130-5ac0b6a4141c // indirect
+	github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec // indirect
 	github.com/tetratelabs/wabin v0.0.0-20230304001439-f6f874872834 // indirect
 	github.com/tetratelabs/wazero v1.10.1 // indirect
 	github.com/xeodou/go-sqlcipher v0.0.0-20200727080346-d681773ef093 // indirect
@@ -52,5 +55,9 @@ require (
 	golang.org/x/term v0.38.0 // indirect
 	golang.org/x/text v0.32.0 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
+	modernc.org/libc v1.37.6 // indirect
+	modernc.org/mathutil v1.6.0 // indirect
+	modernc.org/memory v1.7.2 // indirect
+	modernc.org/sqlite v1.28.0 // indirect
 	nhooyr.io/websocket v1.8.17 // indirect
 )
