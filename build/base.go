@@ -93,7 +93,7 @@ func (b *Base) cloneRepos() error {
 			continue
 		}
 		repo = "https://github.com/AutonomousKoi/" + repo
-		if err := sh.Run("git", "clone", repo); err != nil {
+		if err := sh.Run("git", "clone", "--depth", "1", repo); err != nil {
 			return fmt.Errorf("cloning %s: %w", repo, err)
 		}
 	}
