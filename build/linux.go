@@ -24,7 +24,7 @@ func (l Linux) Release() error {
 	mg.Deps(l.Base.compile)
 	mg.Deps(l.Base.preRelease)
 
-	zipPath := filepath.Join(l.DistDir, "AutonomousKoi-linux-"+l.GoARCH+"-"+l.ReleaseVersion+".zip")
+	zipPath := filepath.Join(l.DistDir, "..", "..", "AutonomousKoi-linux-"+l.GoARCH+"-"+l.ReleaseVersion+".zip")
 	return mageutil.ZipFiles(zipPath, map[string]string{
 		filepath.Join(l.BaseDir, "LICENSE"): "LICENSE",
 		l.ExecPath:                          "autonomouskoi",
